@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: BusinessBlue
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="{% static 'contactus/forms.css' %}"/>
+<link rel="stylesheet" href="{% static 'contactus/layout.css' %}"/>
+<link rel="stylesheet" href="{% static 'contactus/navi.css' %}"/>
+<link rel="stylesheet" href="{% static 'contactus/tables.css' %}"/>
+<title>EPVC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="#">EPVC</a></h1>
+      <p>Egyptian Pharmaceutical Vigilance Center</p>
+    </div>
+    <div id="info">
+      <ul>
+        <li>Tel: xxxxx xxxxxxxxxx</li>
+        <li> | </li>
+        <li>Mail: info@domain.com</li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="/departments/">Departments</a>
+          <ul>
+            <li><a href="/departments/">Pharmacoigilance</a></li>
+            <li><a href="#">Medical Devices</a></li>
+            <li><a href="#">Biocides</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/style-demo.html">Ministrial Decrees</a></li>      
+        <li><a href="1">ADR Forms</a></li>
+        <li class="last"><a href="/contactus">Contact us</a></li>
+        <li><a href="pages/full-width.html">FAQs</a></li>
+      </ul>
+    </div>
+    <div id="search">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="submit" name="go" id="go" value="Search" />
+        </fieldset>
+      </form>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="container">
+        <div id="content">
+      <h1>Contact US</h1>
+      <br/>
+      {% for contact in contacts %}
+      <font color="red"><h3>{{ contact.contact_type }} : </h3></font>
+      <p>{{ contact.contact_details }}</p>
+      {% endfor %}
+
+    </div>    
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="footer">
+    <div class="footbox">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">EPVC</a></p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
